@@ -1,0 +1,87 @@
+/* Universidad de El Salvador
+Nombre: Josué Omar Trejo Bran
+Carnet: TB19002
+Grupo: 3
+*/
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f4f1;  /* Fondo verde muy suave */
+    color: #2d3436;  /* Texto en gris oscuro */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo para los encabezados y el texto en negrita */
+h1, h3, strong {
+    color: #2ecc71;  /* Verde brillante para los encabezados */
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #2ecc71;  /* Fondo verde */
+    color: white;
+    border: none;
+    border-radius: 5px;  /* Bordes redondeados */
+    padding: 10px 20px;
+    cursor: pointer;  /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s;  /* Transición suave al cambiar el color de fondo */
+}
+
+button:hover {
+    background-color: #27ae60;  /* Verde más oscuro cuando el botón está en hover */
+}
+
+/* Estilo para las imágenes dentro de la tabla */
+img {
+    inline-size: 100%;  /* Hacer que la imagen ocupe todo el espacio disponible en ancho */
+    max-inline-size: 150px;  /* Máximo ancho de la imagen (150px) */
+    block-size: auto;  /* La altura se ajusta automáticamente para mantener la proporción */
+}
+
+/* Estilo para la tabla */
+table {
+    inline-size: 95%;  /* El 95% del ancho del contenedor */
+    margin: auto;  /* Centrar la tabla */
+    border-collapse: collapse;  /* Eliminar los espacios entre celdas */
+    margin-block-start: 10px;  /* Añadir margen superior */
+    background-color: #f3f9f6;  /* Color de fondo blanco grisáceo */
+}
+
+/* Estilo para las celdas de la tabla (th y td) */
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #2ecc71;  /* Bordes verdes para las celdas */
+}
+
+/* Estilo para los encabezados de la tabla (th) */
+th {
+    background-color: #2ecc71;  /* Fondo verde para los encabezados */
+    color: white;  /* Texto blanco para los encabezados */
+}
+
+/* Estilo para la columna de precio en la tabla */
+th#price {
+    cursor: pointer;  /* Cambiar el cursor al pasar sobre el encabezado de la columna de precio */
+}
+
+/* Estilo para los checkboxes */
+input[type="checkbox"] {
+    margin-inline-end: 5px;  /* Espacio entre el checkbox y el siguiente elemento */
+}
+
+/* Estilos de filtrado de productos (cuando el checkbox está marcado o desmarcado) */
+input#c1:checked ~ table tbody tr.c1,
+input#c2:checked ~ table tbody tr.c2,
+input#c3:checked ~ table tbody tr.c3,
+input#c4:checked ~ table tbody tr.c4 {
+    display: table-row;  /* Mostrar las filas correspondientes a la categoría seleccionada */
+}
+
+input#c1:not(:checked) ~ table tbody tr.c1,
+input#c2:not(:checked) ~ table tbody tr.c2,
+input#c3:not(:checked) ~ table tbody tr.c3,
+input#c4:not(:checked) ~ table tbody tr.c4 {
+    display: none;  /* Ocultar las filas correspondientes a la categoría desmarcada */
+}
